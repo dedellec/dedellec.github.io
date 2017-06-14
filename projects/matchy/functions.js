@@ -23,24 +23,47 @@ function search(animals, name) {
 
 
 
-
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function replace(animals, name, replacement) {
+    for (var i = 0; i <= animals.length - 1; i++){
+      if (name.toUpperCase() === animals[i].name.toUpperCase()){
+          animals[i] = replacement;
+          console.log(replacement);
+          return replacement;
+      }
+      }  return null;
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function remove(animals, name) {
+    for (var i = 0; i <= animals.length - 1; i++){
+      if (name.toUpperCase() === animals[i].name.toUpperCase()){
+          return animals.splice(i, 1);
+      }
+      }  return null;
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function add(animals, animal) {
+    var unique = true;
+    for(var i=0; i<animals.length; i++) {
+        if (animal.name.toUpperCase() === animals[i].name.toUpperCase()) {
+            unique = false;
+        }
+    }
+      if (animal.name.length > 0 && animal.species.length > 0 && unique === true) {
+          animals.push(animal);
+      }
+  }
 
 /** 
  * You did it! You're all done with Matchy!
