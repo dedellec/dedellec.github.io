@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        .example-form {
+    /* Just to center the form on the page, use: margin: 0 auto;*/
+    margin: 20px;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.example-form div + div {
+    margin-top: 1em;
+}
+
+.example-form label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 90px;
+}
+
+.example-form input,
+.example-form textarea {
+    /* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+    font: 1em sans-serif;
+    /* To give the same size to all text field */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+.example-form input:focus,
+.example-form textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+.example-form textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+    /* To allow users to resize any textarea vertically
+    It does not work on every browsers */
+    resize: vertical;
+}
+table {
+    margin: 20px;
+}
+
+table,
+th,
+td {
+    padding: 4px;
+    border: 1px solid black;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 4px;
+}
+
+.example-grid {
+    margin: 20px;
+}
+
+.row-img {
+    margin: 4px;
+}
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <a href="https://en.wikipedia.org/wiki/Duck">Duck</a>
+        <img src="img/black-currant.jpg" />
+        <h1>Abacot Ranger</h1>
+            <p>The Abacot Ranger is a breed of domestic duck, initially known as the <em>Hooded Ranger</em> and as <b>Streicherente</b> ('Ranger Duck', in Germany). A utility breed, originally developed for eggs and meat, it is popular for exhibition and egg production today.
+                <ul>
+                    <li>duck</li>
+                    <li>duck</li>
+                    <li>goose</li>
+                </ul>
+                <ol>
+                    <li>duck</li>
+                    <li>duck</li>
+                    <li>goose</li>
+                    <li>duck</li>
+                    <li>duck</li>
+                    <li>moose</li>
+                </ol>
+                <dl>
+                  <dt>Duck</dt>
+                        <dd>A bird</dd>
+                    <dt>Goose</dt>
+                        <dd>A different bird</dd>
+                    <dt>Moose</dt>
+                        <dd>Not a bird</dd>
+                </dl>
+            </p>
+        <h2>Barbary Duck</h2>
+        <p>Another name for the Barbary Duck, the Muscovy duck (<i>Cairina moschata</i>) is a large duck native to <strong>Mexico</strong>, <strong>Central,</strong> and <strong>South America</strong>. Small wild and feral breeding populations have established themselves in the <strong>United States</strong>, particularly in Florida and the lower Rio Grande Valley of Texas as well as in many other parts of <strong>North America</strong>, including southern <strong>Canada</strong>. Feral Muscovy ducks are found in <strong>New Zealand</strong>, <strong>Australia</strong>, and in parts of <strong>Europe</strong>.</p>
+        <p>They are large ducks, with the males about 76 cm (30 in) long, and weighing up to 7 kg (15 lb). Females are considerably smaller, and only grow to 3 kg (6.6 lb), roughly half the males' size. The bird is predominantly black and white, with the back feathers being iridescent and glossy in males, while the females are more drab. The amount of white on the neck and head is variable, as well as the bill, which can be yellow, pink, black, or any mixture of these. They may have white patches or bars on the wings, which become more noticeable during flight. Both sexes have pink or red wattles around the bill, those of the male being larger and more brightly colored.</p>
+        <p>Although the Muscovy duck is a tropical bird, it adapts well to cooler climates. In general, Barbary duck is the term used for C. moschata in a culinary context.</p>
+        <p>The domestic breed, <i>Cairina moschata domestica</i>, is commonly known in Spanish as the pato criollo ("creole duck"). They have been bred since pre-Columbian times by Native Americans and are heavier and less able to fly long distances than the wild subspecies. Their plumage color is also more variable. Other names for the domestic breed in Spanish are pato casero ("backyard duck") and pato mudo ("mute duck").</p>
+            <div class="flex-row">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+            </div>
+        <h3>Cayuga Duck</h3>
+        <p>A Cayuga Duck is a medium-class domesticated duck breed that has been a popular variety in the <strong>USA</strong> since the mid-19th century. They are used for egg and meat production, as well as an ornamental bird.
+        <p>
+            <form class="example-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" />
+                </div>
+                <div>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" />
+                </div>
+                <div>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg"></textarea>
+                </div>
+
+                <div class="button">
+                    <button type="submit">Say it!! Get it all out!</button>
+                </div>
+            </form>
+        </p>
+        <h4>Duclair Duck</h4>
+        <p>The Duclair duck is a dual purpose duck breed named after the town of Duclair in <strong>Normandy</strong>. It is a type of Rouen duck and is also described as being similar to the Swedish Blue. Official standards were established for the Duclair on November 23, 1923.</p>
+        <p>Duclair ducks are considered excellent for roast duck. It has been described as "tasting like a cross between veal and lamb" by Alain Ducasse and Daniel Boulud, and as "gamy".</p>
+        <div class="example-grid">
+        <div class="row">
+        <div class="col-md-2"><img src="img/cherries.jpg" class="row-img"></img>
+        </div>
+        <div class="col-md-10">Please feed me more cherries.</div>
+        </div>
+        <div class="row">
+        <div class="col-md-2"><img src="img/black-currant.jpg" class="row-img"></img>
+        </div>
+        <div class="col-md-10">Black currents, I have never tried. You?</div>
+        </div>
+        <div class="row">
+        <div class="col-md-2"><img src="img/apple-in-grass.jpg" class="row-img"></img>
+        </div>
+        <div class="col-md-10">Apples! Nom, nom, nom...</div>
+        </div>
+        </div>
+        <h5>Eider Duck</h5>
+        <p>Eiders are large seaducks in the genus <i>Somateria</i>. The scientific name is derived from Ancient Greek somatos "body" and erion "wool", referring to eiderdown.</p>
+        <p>The three extant species all breed in the cooler latitudes of the Northern Hemisphere.</p>
+        <p>The down feathers of eider ducks, and some other ducks and geese, are used to fill pillows and quilts - they have given the name to the type of quilt known as an eiderdown.</p>
+        <p>Steller's eider (<i>Polysticta stelleri</i>) is in a different genus despite its name.</p>
+        <p>The call of the duck has been likened to sound of "surprised pantomime dames, or even the comedian Frankie Howerd".</p>
+        <h6><small>Golden Cascade</small></h6>
+        <p>The Golden Cascade is a breed of domestic duck developed in the <strong>United States</strong>. In 1979, David Holderread of Corvallis, Oregon set out to breed a duck that was fast growing, active, laid eggs well, and was auto-sexing. By the mid-1980s, the Golden Cascade was introduced to the market. It is not yet admitted to the American Poultry Association's Standard of Perfection.</p>
+        <p><small>The Golden Cascade was so named because of its golden hue, and for the prominent Cascade Range of the Northwest. They weigh 6-8 pounds (2.7-3.6 kilos). Females have Fawn or buff plumage and Orange beaks with brown markings. Drakes have yellow beaks, Satin green or Bronze heads, white ring on their necks, reddish breasts and white underbodies. The throat can turn light fawn. Older drakes can molt to a fawn or buff that covers the head and body but First year birds should have a chestnut chest with the classic golden buff to white shoulders, sides and belly. The ducklings may be sexed by down color: darker for males, lighter for females.</small></p>
+            <table>
+                <thead>
+                    <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                    <td colspan="2">Names of ducklings...</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                    <td>Quackers</td>
+                    <td>McGhee</td>
+                    </tr>
+                    <tr>
+                    <td>PaddleFoot</td>
+                    <td>Dempsey</td>
+                    </tr>
+                    <tr>
+                    <td>Felix</td>
+                    <td>Waters</td>
+                    </tr>
+                    <tr>
+                    <td>Ponds</td>
+                    <td>Ripple</td>
+                    </tr>
+                    <tr>
+                    <td>Squeaky</td>
+                    <td>Beaky</td>
+                    </tr>
+                    </tbody>
+            </table>
+            <div>Silly goose! Ducks don't eat lollipops!!</div>
+            <div><img src="http://www.reactiongifs.com/r/dsmh.gif"><div>
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>
